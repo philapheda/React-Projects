@@ -1,7 +1,42 @@
+@font-face {
+  font-family: Horror;
+  src: url(./assets/ZombiesReborn-Eanaj.otf);
+}
 * {
   margin: 0;
   padding: 0;
 }
+*::-webkit-scrollbar {
+  display: none;
+}
+* {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
+
 .whole {
+  font-family: Horror;
   background-color: black;
+  font-size: 2rem;
+}
+.cardss {
+  margin: auto;
+  width: 90%;
+  height: 100vh;
+  overflow: scroll;
+  overflow-x: hidden;
+  background-color: black;
+  color: white;
+  margin-top: 2rem;
+  padding: 1rem 2rem;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  gap: 1rem;
+}
+.cardss::-webkit-scrollbar {
+  display: none;
+}
+.cardss {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
 }

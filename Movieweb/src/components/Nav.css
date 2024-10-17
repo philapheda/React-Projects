@@ -39,6 +39,7 @@
 }
 .nav .search {
   color: white;
+  font-size: medium;
 }
 .nav .search ul {
   display: flex;
