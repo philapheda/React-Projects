@@ -19,6 +19,7 @@
 }
 .nav .logo h2 {
   color: white;
+  font-weight: 300;
 }
 .nav .logo span {
   color: darkred;
@@ -45,4 +46,12 @@
   display: flex;
   list-style-type: none;
   gap: 1.5rem;
+}
+@media (max-width: 700px) {
+  .nav .menu {
+    display: none;
+  }
+  .nav .search {
+    display: none;
+  }
 }

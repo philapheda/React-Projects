@@ -32,6 +32,7 @@
   display: grid;
   grid-template-columns: 1fr 1fr 1fr 1fr;
   gap: 1rem;
+  text-align: center;
 }
 .cardss::-webkit-scrollbar {
   display: none;
@@ -39,4 +40,14 @@
 .cardss {
   -ms-overflow-style: none;
   scrollbar-width: none;
+}
+@media (min-width: 700px) and (max-width: 900px) {
+  .cardss {
+    grid-template-columns: 1fr 1fr 1fr;
+  }
+}
+@media (max-width: 500px) {
+  .cardss {
+    grid-template-columns: 1fr;
+  }
 }

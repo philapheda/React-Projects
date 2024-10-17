@@ -3,7 +3,7 @@ import "./App.css";
 import Nav from "./components/Nav";
 import Hero from "./components/Hero";
 import Card from "./components/Card";
-
+import Footer from "./components/Footer";
 function App() {
   const [cards, setCards] = useState([]);
 
@@ -62,6 +62,7 @@ function App() {
       <Nav />
       <Hero />
       <div className="cardss">{cards}</div>
+      <Footer />
     </div>
   );
 }

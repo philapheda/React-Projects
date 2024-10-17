@@ -17,7 +17,8 @@
   background-repeat: no-repeat;
 }
 .hero h1 {
-  font-weight: bold;
+  font-weight: 200;
+  font-size: 5rem;
 }
 .hero p {
   font-size: xx-large;

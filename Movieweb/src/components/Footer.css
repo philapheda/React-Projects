@@ -1,0 +1,88 @@
+@font-face {
+  font-family: Horror;
+  src: url(./assets/ZombiesReborn-Eanaj.otf);
+}
+.Footer {
+  margin-top: 2rem;
+  padding-left: 2rem;
+  padding-right: 2rem;
+  height: 60vh;
+  display: flex;
+  justify-content: space-around;
+  background-color: rgb(21, 21, 21);
+  color: white;
+  background-image: url("../assets/backfoot.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+.Footer h1 {
+  font-weight: 200;
+}
+.Footer .comment {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1rem;
+}
+.Footer .comment input {
+  background: transparent;
+  color: white;
+  width: 15rem;
+  border: 0.5px solid white;
+  height: 1.5rem;
+  border-radius: 3%;
+}
+.Footer .comment textarea {
+  background: transparent;
+  height: 5rem;
+  border: 1px solid white;
+  border-radius: 3%;
+  width: 15rem;
+}
+input::placeholder {
+  color: white;
+  font-family: Horror;
+  font-weight: 100;
+}
+::-ms-input-placeholder {
+  color: white;
+  font-family: Horror;
+  font-weight: 100;
+}
+::-webkit-input-placeholder {
+  color: white;
+  font-family: Horror;
+  font-weight: 100;
+}
+input::placeholder {
+  color: white;
+  font-family: Horror;
+  font-weight: 100;
+}
+::-ms-input-placeholder {
+  color: white;
+  font-family: Horror;
+  font-weight: 100;
+}
+::-webkit-input-placeholder {
+  color: white;
+  font-family: Horror;
+  font-weight: 100;
+}
+.comment button {
+  background: transparent;
+  color: white;
+  width: 5rem;
+  margin-bottom: 0.5rem;
+  border: none;
+  font-family: horror;
+  font-weight: 100;
+  font-size: large;
+  border-radius: 10%;
+  background-color: darkred;
+  height: 2rem;
+}
+.comment button:hover {
+  color: black;
+  padding-left: 1rem;
+}
