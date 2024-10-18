@@ -1,0 +1,38 @@
+.Main {
+  padding: 1rem;
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+.fields {
+  margin: auto;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  row-gap: 1rem;
+  width: 80%;
+}
+.field {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+.field input {
+  height: 35px;
+  width: 222px;
+  border-radius: 4.91px;
+  border: 1px solid black;
+}
+button {
+  align-self: center;
+  width: 87%;
+  background-image: linear-gradient(
+    to right,
+    rgba(103, 34, 128, 1),
+    rgba(166, 38, 211, 1)
+  );
+  border: none;
+  border-radius: 5px;
+  height: 40px;
+  grid-column: 1/-1;
+  cursor: pointer;
+}
