@@ -1,8 +1,15 @@
-import React from "react";
+import React, {useState} from "react";
 import btn from "../assets/button.png";
 import "./Main.css";
+import datas from "../assets/Data.js"
 function Main() {
-  return (
+  let randomimg = datas.data.memes[Math.floor(Math.random()*(datas.data.memes.length))].url
+  let [image, setimage] =  useState(randomimg)
+  function generate(){
+    let randomim = datas.data.memes[Math.floor(Math.random()*(datas.data.memes.length))].url
+    setimage(randomim)
+  }
+ return (
     <div className="Main">
       <div className="fields">
         <div className="field">
@@ -14,9 +21,14 @@ function Main() {
           <input placeholder="  And take my money" type="text"></input>
         </div>
         <button>
-          <img src={btn} />
+          <img src={btn} onClick={generate}/>
         </button>
       </div>
+      <div className="image">
+        <p></p>
+            <img src={image}/>
+          <p></p>
+        </div>
     </div>
   );
 }
