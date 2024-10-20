@@ -41,8 +41,24 @@ button {
 .image{
   margin: auto;
   display: flex;
-  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+  position: relative;
 }
 .image img{
   width: 80%;
+}
+.image p{
+  position: absolute;
+  color: black;
+}
+.image .top{
+  top: 2%;
+  font-size: xx-large;
+  z-index: 1;
+}
+.image .bot{
+  bottom: 2%;
+  font-size: xx-large;
+  z-index: 1;
 }
