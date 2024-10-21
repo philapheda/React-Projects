@@ -3,21 +3,38 @@ import btn from "../assets/button.png";
 import "./Main.css";
 import datas from "../assets/Data.js"
 function Main() {
-  let randomimg = datas.data.memes[Math.floor(Math.random()*(datas.data.memes.length))].url
-  let [image, setimage] =  useState(randomimg)
+  const [memedata, setmemedata] =useState(datas)
+  let randomimg = memedata.data.memes[Math.floor(Math.random()*(memedata.data.memes.length))].url
+  const [meme, setmeme]= useState({
+    top : " ",
+    bottom : " ",
+    image : randomimg
+  })
   function generate(){
-    let randomim = datas.data.memes[Math.floor(Math.random()*(datas.data.memes.length))].url
-    setimage(randomim)
+    let randomim = memedata.data.memes[Math.floor(Math.random()*(memedata.data.memes.length))].url
+    setmeme((prevmeme) => {
+      return {
+        ...prevmeme,
+        image : randomim
+      }
+  })
   }
-  let [top, settop] = useState("")
-  let [below, setbelow] = useState("")
   function write(){
-    settop(document.getElementById('top').value)
+    setmeme((prevmeme) => {
+      return {
+        ...prevmeme,
+        top: document.getElementById('top').value
+      }
+    })
   }
   function writel(){
-    setbelow(document.getElementById('bel').value)
+    setmeme((prevmeme) => {
+      return {
+        ...prevmeme,
+        bottom: document.getElementById('bel').value
+      }
+    })
   }
-  console.log("hi")
  return (
     <div className="Main">
       <div className="fields">
@@ -34,9 +51,9 @@ function Main() {
         </button>
       </div>
       <div className="image">
-        <p className="top">{top}</p>
-            <img src={image}/>
-          <p className="bot">{below}</p>
+        <p className="top">{meme.top}</p>
+            <img src={meme.image}/>
+          <p className="bot">{meme.bottom}</p>
         </div>
     </div>
   );
