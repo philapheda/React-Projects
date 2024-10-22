@@ -5,6 +5,11 @@ import Hero from "./components/Hero";
 import Card from "./components/Card";
 import Footer from "./components/Footer";
 function App() {
+  const [search, Setsearch] = useState("");
+  function Reciever(search) {
+    Setsearch(search);
+  }
+  console.log(search);
   const [cards, setCards] = useState([]);
 
   async function searchMoviesByTitle(title) {
@@ -20,6 +25,7 @@ function App() {
       const searchData = await response.json();
 
       if (searchData.Response === "True") {
+        console.log(searchData.Search);
         return searchData.Search;
       } else {
         console.log("No movies found");
@@ -37,7 +43,12 @@ function App() {
       if (movies) {
         movies.forEach((movie) => {
           newCards.push(
-            <Card img={movie.Poster} title={movie.Title} key={movie.imdbID} />
+            <Card
+              img={movie.Poster}
+              title={movie.Title}
+              key={movie.imdbID}
+              year={movie.Year}
+            />
           );
         });
       }
@@ -48,18 +59,19 @@ function App() {
 
   useEffect(() => {
     const movieTitles = [
+      search,
       "Saw",
       "Halloween",
       "Friday the 13th",
       "Scream",
       "The Nun",
     ];
-    fetchMultipleMovies(movieTitles);
-  }, []);
 
+    fetchMultipleMovies(movieTitles);
+  }, [search]);
   return (
     <div className="whole">
-      <Nav />
+      <Nav change={Reciever} />
       <Hero />
       <div className="cardss">{cards}</div>
       <Footer />

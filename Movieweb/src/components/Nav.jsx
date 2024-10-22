@@ -1,7 +1,15 @@
-import React from "react";
+import React, { useState } from "react";
 import logo from "../assets/logo.png";
 import "./Nav.css";
-export default function Nav() {
+import { useRef } from "react";
+
+export default function Nav(props) {
+  const val = useRef();
+
+  function search() {
+    const searchValue = val.current.value;
+    props.change(searchValue);
+  }
   return (
     <div className="nav">
       <div className="logo">
@@ -13,8 +21,8 @@ export default function Nav() {
       <div className="menu">
         <ul>
           <li>Home</li>
-          <li>Features</li>
-          <li>pages</li>
+          <li>Tv Series</li>
+          <li>Documentary</li>
           <li>Blogs</li>
           <li>Shop</li>
         </ul>
@@ -22,7 +30,12 @@ export default function Nav() {
       <div className="search">
         <ul>
           <li>
-            <i class="fa-solid fa-magnifying-glass"></i>
+            <input type="text" placeholder="search" id="search" ref={val} />
+          </li>
+          <li>
+            <button onClick={search}>
+              <i class="fa-solid fa-magnifying-glass"></i>
+            </button>
           </li>
           <li>
             <i class="fa-regular fa-bell"></i>

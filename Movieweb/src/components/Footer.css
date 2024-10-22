@@ -86,3 +86,14 @@ input::placeholder {
   color: black;
   padding-left: 1rem;
 }
+.Footer ul {
+  list-style-type: none;
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+  margin-top: 1.5rem;
+}
+.Footer ul li a {
+  color: darkred;
+  text-decoration: none;
+}

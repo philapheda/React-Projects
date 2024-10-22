@@ -6,9 +6,24 @@ export default function Footer() {
       <div>
         <h1>Contact Us</h1>
         <ul>
-          <li></li>
-          <li></li>
-          <li></li>
+          <li>
+            <a href="www.twitter.com">
+              {" "}
+              <i class="fa-brands fa-twitter"></i> X
+            </a>
+          </li>
+          <li>
+            <a href="www.instagram.com">
+              {" "}
+              <i class="fa-brands fa-instagram"></i> Instagram
+            </a>
+          </li>
+          <li>
+            <a href="www.telegram.com">
+              {" "}
+              <i class="fa-brands fa-telegram"></i> Telegram
+            </a>
+          </li>
         </ul>
       </div>
       <div className="comment">
