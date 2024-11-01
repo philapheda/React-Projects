@@ -1,4 +1,5 @@
 import React, {useState} from 'react'
+import { Link } from 'react-router-dom'
 import { MdScience } from "react-icons/md";
 import { GiMoneyStack } from "react-icons/gi";
 import subjects from "../assets/sub"
@@ -7,11 +8,11 @@ function Exam() {
     const [stream, setstream] = useState(true)
     const natcards = subjects.map((card) => {
       if (card.nat) { 
-    return (<li><Card sub = {card.sub} loc = {card.location}/></li>)}
+    return (<Link to={"/exam"}><li><Card sub = {card.sub} loc = {card.location}/></li></Link>)}
   })
     const soccards = subjects.map((card) => {
       if (!card.nat) { 
-    return (<li><Card sub = {card.sub} loc = {card.location}/></li>)}
+    return (<Link to = {"/exam"}><li><Card sub = {card.sub} loc = {card.location}/></li></Link>)}
   })
 
     function flip_to_nature(){
