@@ -1,11 +1,12 @@
 import React from 'react'
 import { Link } from 'react-router-dom'
+import Exam_list_card from './Exam_list_card'
 function Exam_list(prop) {
-    const exam_list = prop.examlist.map(exam => <Link to = {`/exam/${exam.sub}/${exam.sub}`}  key={exam.sub+exam.year}><li className='flex flex-col p-4 rounded-md bg-green-200'><p>{exam.sub}</p> <p>Time : {exam.time}</p> <p>Year : {exam.year}</p><p>Question number : {exam.q}</p></li></Link> )
-    console.log(exam_list)
+    const exam_list = prop.examlist.map(exam => <Link to = {`/exam/${exam.sub}/${exam.sub}`}  key={exam.sub+exam.year}><li className='flex flex-col p-4 rounded-md'><Exam_list_card sub = {exam.sub} year = {exam.year} score = '0' time = {exam.time} /></li></Link> )
   return (
     <div>
-    <ul className='flex flex-col gap-4  w-4/5 p-5'>
+      <Link className = "ml-6 text-green-700 font-bold bg-green-200 p-2 rounded-md hover:p-1.5 center gap-2 w-[5rem]"to={"/"}>Back</Link>
+    <ul className='p-7 grid sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 xl:grid-cols-5 gap-4'>
         {exam_list}
     </ul>
     </div>

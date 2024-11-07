@@ -1,31 +1,23 @@
 import React from "react"
 import Exam_list from "../Components/Exam_list"
 import Examlist from '../assets/Examlist'
-import { Outlet } from "react-router-dom"
+import { Link, Outlet } from "react-router-dom"
 import { useParams } from "react-router-dom"
 function Exam_page() {
   const {id} = useParams()
   switch(id){
     case "Mathematics Natural":
-      return (<><header><Exam_list examlist = {Examlist.slice(0,3)}/></header> 
-      <main><Outlet/></main></> 
-    )
-      break
+      return (<Exam_list examlist = {Examlist.slice(0,9)}/> )
     case "Physics":
-      return <Exam_list examlist = {Examlist.slice(0,3)}/>
-      break
+      return <Exam_list examlist = {Examlist.slice(8,16)}/>
     case "Chemistry":
-      return <Exam_list examlist = {Examlist.slice(0,3)}/>
-      break
+      return <Exam_list examlist = {Examlist.slice(16,25)}/>
     case "Biology":
-      return <Exam_list examlist = {Examlist.slice(0,3)}/>
-      break
+      return <Exam_list examlist = {Examlist.slice(25,32)}/>
     case "English":
-      return <Exam_list examlist = {Examlist.slice(0,3)}/>
-      break
+      return <Exam_list examlist = {Examlist.slice(32,40)}/>
     case "SAT":
-      return <Exam_list examlist = {Examlist.slice(0,3)}/>
-      break    
+      return <Exam_list examlist = {Examlist.slice(40,50)}/>
   }
 }
 
