@@ -1,15 +1,21 @@
 import React, { useState } from 'react'
-import {BrowserRouter as Router, Routes, Route} from "react-router-dom"
+import {createBrowserRouter,createRoutesFromElements, Route, RouterProvider} from "react-router-dom"
 import Home from "./Pages/Home"
 import Exam_page from './Pages/Exam_page'
+import Question from './Pages/Question'
 function App() {
+  const router = createBrowserRouter(
+    createRoutesFromElements(
+      <Route>
+        <Route path='/' element={<Home/>}/>
+        <Route path='/exam/:id' element={<Exam_page/>}>
+          <Route path = "/exam/:id/:subid" element = {<Question/>}/>
+        </Route>
+      </Route>
+    )
+  )
   return(
-    <Router>
-      <Routes>
-        <Route path = "/" element = {<Home/>}/>
-        <Route path='/exam' element = {<Exam_page/>}/>
-      </Routes>
-    </Router>
+    <RouterProvider router={router}/>
   )
 }
 
