@@ -1,30 +1,40 @@
-import React, { useState } from 'react'
+import React, { useState } from "react";
 
 function Question_template(props) {
-    const [selected, setselected] = useState(false)
-    function handleChange (event) {
-        setselected(event.target.value)
-        console.log(event)
+  const[style, setstyle] = useState('')
+  function handleChange(event){
+    console.log(event.target.value, props.ans)
+    if (event.target.value === props.ans){
+      setstyle('bg-green-200')
     }
-    const option = props.option
-    const displayed = option.map((option) => (
-        <label key={option}>
-          <input
-            name={option}
-            type="radio"
-            value={option}
-            checked = {selected === name}
-            onChange={handleChange}
-          />
-          {option}
-        </label>
-      ))
+    else{
+      setstyle('bg-red-200')
+    }
+  }
   return (
-    <div>
-        <p>props.question</p>
-        {displayed}
+    <div className="shadow-lg p-7">
+      <p className="text-lg mb-2">{props.num}.  {props.question}</p>
+      <hr/>
+      <ul className={`flex flex-col gap-2 ${style}`}>
+        <li>
+          <input type="radio" id="A" name = {props.question} value = {props.option[0]} onChange={handleChange}/>
+          <label htmlFor="A" className="ml-3">A. {props.option[0]}</label>
+        </li>
+        <li>
+          <input type="radio" id="B" name = {props.question} value = {props.option[1]} onChange={handleChange}/>
+          <label htmlFor="B" className="ml-3">B. {props.option[1]}</label>
+        </li>
+        <li>
+          <input type="radio" id="C" name = {props.question} value = {props.option[2]} onChange={handleChange}/>
+          <label htmlFor="C" className="ml-3">C. {props.option[2]}</label>
+        </li>
+        <li>
+          <input type="radio" id="D" name = {props.question} value = {props.option[3]} onChange={handleChange}/>
+          <label htmlFor="D" className="ml-3">D. {props.option[3]}</label>
+        </li>
+      </ul>
     </div>
-  )
+  );
 }
 
-export default Question_template
+export default Question_template;
