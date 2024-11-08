@@ -1,6 +1,6 @@
 export default [
     {
-        sub : "Mathematics Natural",
+        sub : "Maths Natural",
         location : "/Nmaths.jpg",
         nat : true
     },

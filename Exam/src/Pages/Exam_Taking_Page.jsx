@@ -6,8 +6,7 @@ function Exam_Taking_Page() {
   const {subid} = useParams()
   return (
     <div>
-      <Exam_nav/>
-      {subid}
+      <Exam_nav />
     </div>
   )
 }

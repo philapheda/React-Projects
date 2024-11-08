@@ -6,7 +6,7 @@ import { useParams } from "react-router-dom"
 function Exam_page() {
   const {id} = useParams()
   switch(id){
-    case "Mathematics Natural":
+    case "Maths Natural":
       return (<Exam_list examlist = {Examlist.slice(0,8)}/> )
     case "Physics":
       return <Exam_list examlist = {Examlist.slice(8,16)}/>
