@@ -3,7 +3,7 @@ import React from "react";
 function Exam_nav() {
   return (
   <div>
-    <p></p>
+    <p>hi</p>
   </div>
   );
 }
