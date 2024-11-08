@@ -11,7 +11,7 @@ function Nav() {
         setopen((prevopen) => !prevopen)
     }
   return (
-    <div className='p-7 fixed top-0 flex bg-white  justify-between items-center w-full'>
+    <div className='p-7 fixed top-0 flex bg-white  justify-between items-center w-full shadow-md'>
         <h1 className='bg-gradient-to-r from-red-500 via-yellow-300 to-green-500 font-bold text-[1.5rem] bg-clip-text text-transparent' >Matric  prep</h1>
         <ul className=' gap-8 text-green-700 font-bold hidden sml:flex'>
             <li className='bg-green-200 p-2 rounded-md hover:p-1.5 flex gap-2 items-center'>{<FaHome />}Home</li>

@@ -1,12 +1,13 @@
 import React from 'react'
 import Question_template from '../Components/Question_template'
+import Exam_nav from "../Components/Exam_nav"
+import { useParams } from 'react-router-dom'
 function Exam_Taking_Page() {
+  const {subid} = useParams()
   return (
     <div>
-      <Question_template num = {1} question = "what is your name? " option = {['Abrham','Yonatan','Yishak','Meron']} ans = 'Abrham'/>
-      <Question_template num = {1} question = "what is your name? " option = {['Abrham','Yonatan','Yishak','Meron']} ans = 'Abrham'/>
-      <Question_template num = {1} question = "what is your name? " option = {['Abrham','Yonatan','Yishak','Meron']} ans = 'Abrham'/>
-      <Question_template num = {1} question = "what is your name? " option = {['Abrham','Yonatan','Yishak','Meron']} ans = 'Abrham'/>
+      <Exam_nav/>
+      {subid}
     </div>
   )
 }
