@@ -7,13 +7,13 @@ function Exam_page() {
   const {id} = useParams()
   switch(id){
     case "Mathematics Natural":
-      return (<Exam_list examlist = {Examlist.slice(0,9)}/> )
+      return (<Exam_list examlist = {Examlist.slice(0,8)}/> )
     case "Physics":
       return <Exam_list examlist = {Examlist.slice(8,16)}/>
     case "Chemistry":
-      return <Exam_list examlist = {Examlist.slice(16,25)}/>
+      return <Exam_list examlist = {Examlist.slice(16,24)}/>
     case "Biology":
-      return <Exam_list examlist = {Examlist.slice(25,32)}/>
+      return <Exam_list examlist = {Examlist.slice(24,32)}/>
     case "English":
       return <Exam_list examlist = {Examlist.slice(32,40)}/>
     case "SAT":
