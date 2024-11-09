@@ -4,8 +4,8 @@ function Exam_nav(props) {
   let {subid} = useParams()
   subid = subid.replace(/[0-9]/g, '')
   return (
-  <div>
-        <div className='p-7 fixed top-0 flex bg-white  justify-between items-center w-full shadow-md'>
+  <div className="overflow-visible">
+        <div className='p-7 sticky top-0 flex bg-white  justify-between items-center w-full shadow-md'>
         <h1 className='bg-gradient-to-r from-red-500 via-yellow-300 to-green-500 font-bold text-[1.5rem] bg-clip-text text-transparent' >Matric  prep</h1>
         <ul className="flex justify-start items-center gap-6">
               <li className="text-lg"><p>15/50</p></li>

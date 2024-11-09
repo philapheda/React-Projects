@@ -12,7 +12,8 @@ function App() {
           <Route index element = {<Exam/>}/>
           <Route path='/exam/:id' element={<Exam_page/>}/>
         </Route>
-        <Route path = "/exam/:id/:subid" element = {<Exam_Taking_Page/>}/>
+        <Route path = "/exam/:id/rightaway/:subid" element = {<Exam_Taking_Page/>}/>
+        <Route path = "/exam/:id/fullexam/:subid" element = {<Exam_Taking_Page/>}/>
       </Route>
     )
   )

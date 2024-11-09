@@ -10,8 +10,8 @@ function Exam_list_card(props) {
             <li><p className='text-[4rem] font-bold'>{props.score}</p></li>
             <li><p className='text-center'>Exam: {props.sub}</p></li>
             <li><p>Given Time: {props.time}</p></li>
-            <li className='bg-green-300 px-3 p-1 rounded-md'><Link to = {`/exam/${props.sub}/${(props.sub+props.year).replace('/','')}`} className = 'flex items-center justify-center gap-2' >Right Away <MdOutlineNotStarted/></Link></li>
-            <li className='bg-green-300 px-3 p-1 rounded-md'><Link to = {`/exam/${props.sub}/${(props.sub+props.year).replace('/','')}`} className = 'flex items-center justify-center gap-2' >Full Exam <CiTimer/></Link></li>
+            <li className='bg-green-300 px-3 p-1 rounded-md'><Link to = {`/exam/${props.sub}/rightaway/${(props.sub+props.year).replace(' ', '').replace('/','')}`} className = 'flex items-center justify-center gap-2' >Right Away <MdOutlineNotStarted/></Link></li>
+            <li className='bg-green-300 px-3 p-1 rounded-md'><Link to = {`/exam/${props.sub}/fullexam/${(props.sub+props.year).replace(' ', '').replace('/','')}`} className = 'flex items-center justify-center gap-2' >Full Exam <CiTimer/></Link></li>
         </ul>
     </div>
   )
