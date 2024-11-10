@@ -8,7 +8,7 @@ function Exam() {
     const [stream, setstream] = useState(true)
     const natcards = subjects.map((card) => {
       if (card.nat) { 
-    return (<Link to={`/exam/${card.sub}`} key={card.sub}><li><Card sub = {card.sub} loc = {card.location}/></li></Link>)}
+    return (<Link to={`/exam/${(card.sub).replace(' ', '')}`} key={card.sub}><li><Card sub = {card.sub} loc = {card.location}/></li></Link>)}
   })
     const soccards = subjects.map((card) => {
       if (!card.nat) { 
