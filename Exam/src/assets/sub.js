@@ -25,7 +25,7 @@ export default [
         nat : true
     },
     {
-        sub : "SAT",
+        sub : "Sat",
         location : "/sat.jpg",
         nat : true
     },
