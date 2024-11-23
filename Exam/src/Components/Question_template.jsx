@@ -2,15 +2,20 @@ import React, { useState } from "react";
 
 function Question_template(props) {
   const [count, setcount] = useState(0);
+
   function handleChange(event) {
     if (event.target.value === props.ans) {
       console.log(event.target.value, props.ans);
-      setcount(prev=>prev+1);
-      props.fun(count);
-    }
-    // else{
 
-    // }
+      // Calculate the new count value
+      const newCount = count + 1;
+
+      // Update state
+      setcount(newCount);
+
+      // Pass the updated count to the parent function
+      props.fun(newCount);
+    }
   }
 
   console.log(count);
@@ -21,7 +26,7 @@ function Question_template(props) {
         {props.num}. {props.question}
       </p>
       <hr />
-      <ul className={`flex flex-col gap-2 `}>
+      <ul className={`flex flex-col gap-2`}>
         <li>
           <input
             type="radio"
@@ -30,7 +35,7 @@ function Question_template(props) {
             value={props.option[0]}
             onChange={handleChange}
           />
-          <label htmlFor="A" className={`ml-3 `}>
+          <label htmlFor="A" className={`ml-3`}>
             A. {props.option[0]}
           </label>
         </li>
@@ -42,7 +47,7 @@ function Question_template(props) {
             value={props.option[1]}
             onChange={handleChange}
           />
-          <label htmlFor="B" className={`ml-3 `}>
+          <label htmlFor="B" className={`ml-3`}>
             B. {props.option[1]}
           </label>
         </li>
@@ -66,7 +71,7 @@ function Question_template(props) {
             value={props.option[3]}
             onChange={handleChange}
           />
-          <label htmlFor="D" className={`ml-3 `}>
+          <label htmlFor="D" className={`ml-3`}>
             D. {props.option[3]}
           </label>
         </li>
