@@ -1,0 +1,30 @@
+.main{
+    background-color: rgba(40, 45, 53, 1);
+    color: white;
+    height: 60vh;
+    display: flex;
+    flex-direction: column;
+}
+.main h1{
+    padding: 30px;
+}
+.main img{
+    position: absolute;
+    top: 35%;
+    left: 79%;
+    z-index: 0;
+    width: 100px;
+}
+.main ul{
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+    padding-left: 60px;
+    z-index: 2;
+    list-style-type: disc;
+    
+}
+li::marker{
+    color: rgba(97, 218, 251, 1);
+    font-size: x-large;
+}
